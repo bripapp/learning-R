@@ -1,3 +1,6 @@
+######
+# CREATING MATRICES
+######
 # quickly create sequential numeric vector
 v <- 1:12
 
@@ -22,3 +25,28 @@ stocks <- c(goog, msft)
 
 # fill in matrix by row, using 2 rows (one for each stock vector)
 stock.matrix <- matrix(stocks, byrow = T, nrow = 2)
+
+# assign column names to stock.matrix
+days <- c('Mon','Tue','Wed','Thu','Fri')
+colnames(stock.matrix) <- days
+
+#assign row names to stock.matrix
+stock.names <- c('GOOG','MSFT')
+rownames(stock.matrix) <- stock.names
+
+######
+# MATRIX ARITHMETIC
+######
+mat <- matrix(1:50, byrow=TRUE, nrow=5)
+
+# Multiplication
+2*mat
+
+# Division (reciprocal)
+1/mat
+
+# Division
+mat/2
+
+# Power
+mat ^ 2
