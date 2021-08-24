@@ -35,7 +35,7 @@ stock.names <- c('GOOG','MSFT')
 rownames(stock.matrix) <- stock.names
 
 ######
-# MATRIX ARITHMETIC
+# MATRIX ARITHMETIC AND COMPARISONS
 ######
 mat <- matrix(1:50, byrow=TRUE, nrow=5)
 
@@ -50,3 +50,18 @@ mat/2
 
 # Power
 mat ^ 2
+
+# Boolean (basically yes or no question)
+# tell me whether each number in matrix is greater than 17 (STATEMENT EVALUATES AS TRUE)
+# or less than 17 (STATEMENT EVALUATES AS FALSE)
+mat > 17 # returns true/false
+mat [mat>17] # returns vector with original values
+
+# you can also do arithmetic with multiple matrices
+mat + mat
+mat / mat
+mat ^ mat
+mat*mat # this is NOT the same as matrix multiplication
+
+# true matrix multiplication in linear algebra (not element by element)
+mat %*% mat
